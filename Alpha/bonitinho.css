@@ -1,0 +1,266 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url(imagens/stacked-peaks-haikei.png);
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+}
+
+#prototipoalpha {
+    position: relative;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1s ease-in-out;
+    width: 680px;
+    height: 680px;
+    background-color: transparent;
+    box-shadow: 0 0 30px 15px rgba(174, 175, 174, 0.699); /* Sombra difusa quadrada */
+}
+
+#iluminacao {
+    top: 60%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    background-color: transparent;
+}
+
+.outraimagem {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translate(-50%, -50%) scale(0.5);
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px #c5c5c58e);
+}
+
+.info-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin: 150px 100px;
+    padding: 50px;
+    border: 1px solid #ccccccd3;
+    border-radius: 5px;
+    background-color: #ffffff38;
+    width: 70%; /* Ajuste conforme necessário */
+    height: 100px;
+    margin-left:auto;
+    margin-right:30%; /* Centraliza as seções */
+    text-align: left; /* Centraliza o texto */
+
+    /* Adiciona estilos para evitar que o texto saia da caixa */
+     overflow-wrap: break-word;
+     word-wrap: break-word;
+     overflow: auto; /* Ou use "auto" se quiser uma barra de rolagem interna */
+}
+
+.map-container {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    border: 0;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+h2 {
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav li {
+    font-size: xx-large;
+}
+
+
+
+      /* Media Queries para responsividade */
+      @media (max-width: 768px) {
+    .info-section {
+        margin: 10px; /* Reduz a margem em telas menores */
+        padding: 15px; /* Ajusta o padding */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px; /* Ajusta o padding do cabeçalho */
+    }
+    .info-section {
+        padding: 10px; /* Ajusta ainda mais o padding */
+    }
+}
+
+
+/* CONTATOS */
+/* Estilos para a lista de contatos */
+ .contatos {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Alinha os itens horizontalmente */
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os itens */
+}
+
+.contatos li {
+    display: inline-block;
+}
+
+/* Estilo para os links de contato */
+.contatos a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0; /* Remove espaçamento em torno das imagens */
+}
+
+.contatos a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+}
+
+/* Efeito hover para os ícones */
+.contatos a:hover img {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+
+
+/* CONTAINER DAS INSTITUIÇÕES */
+.container {
+    display: flex;
+    max-width: 3000px;
+    width: 160%;
+    width: 2070px;
+    background-color: #e2f1ed63;
+    margin-top: 85px;
+}
+
+/* O MESMO CONTAINER SÓ QUE INVERSO */
+.container_reverso {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte a ordem dos elementos */
+    max-width: 3000px;
+    width: 160%;
+    width: 2070px;
+    background-color: #e2f1ed63;
+    margin-top: 70px;
+    flex-wrap: wrap;
+    margin-right: auto;
+}
+
+/* CONTAINER POR CREAS */
+.container_creas {
+    display: flex;
+    max-width: 3000px;
+    width: 160%;
+    width: 2070px;
+    background-color: #e2f1ed63;
+    margin-top: 70px;
+}
+
+/* Estilos da coluna de texto */
+  .texto {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto h1 {
+    font-size: 38px;
+    color: #333;
+}
+
+.texto p {
+    font-size: 25px;
+    color: #333;
+}
+
+.texto button {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.texto button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilos da coluna de imagem */
+.imagens {
+    flex: 1;
+    background-color: #1E3932;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.imagens img {
+    max-width: 100%;
+    height: auto;
+}
+
+.legenda {
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.legenda-cold {
+    bottom: 20px;
+    left: 25%;
+}
+
+.legenda-refreshers {
+    bottom: 20px;
+    right: 25%;
+}
+
+/* CONTAINER FOOTER */
+.container_footer {
+    display:block;
+    max-width: 3000px;
+    width: 130%;
+    width: 2070px;
+    background-color: #e2f1ed10;
+    margin-top: 60px;
+}
